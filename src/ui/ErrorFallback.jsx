@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ErrorFallback } from ".";
 
 const StyledErrorFallback = styled.main`
   height: 100vh;
@@ -29,3 +30,5 @@ const Box = styled.div`
     color: var(--color-grey-500);
   }
 `;
+
+export default ErrorFallback;
