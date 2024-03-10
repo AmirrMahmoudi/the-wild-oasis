@@ -11,7 +11,6 @@ const Heading = styled.h1`
     css`
       font-size: 3rem;
       font-weight: 600;
-      background-color: yellow;
     `}
   ${(props) =>
     props.as === "h2" &&
@@ -24,7 +23,6 @@ const Heading = styled.h1`
     css`
       font-size: 2rem;
       font-weight: 500;
-      background-color: black;
     `}
   line-height:1.4;
 `;
