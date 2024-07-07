@@ -16,7 +16,3 @@ export function useCreateCabin() {
 
   return { isCreating, createCabin };
 }
-
-// rest at the end not in the middle
-// they don't know me son
-// ok boy
