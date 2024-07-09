@@ -24,7 +24,7 @@ const Img = styled.img`
   width: 6.4rem;
   aspect-ratio: 3 / 2;
   object-fit: cover;
-  object-podistion: center;
+  object-position: center;
   transform: scale(1.5) translateX(-7px);
 `;
 
@@ -56,8 +56,8 @@ function CabinRow({ cabin }) {
     name,
     maxCapacity,
     regularPrice,
-    image,
     discount,
+    image,
     description,
   } = cabin;
 
@@ -66,25 +66,23 @@ function CabinRow({ cabin }) {
       name: `Copy of ${name}`,
       maxCapacity,
       regularPrice,
-      image,
       discount,
+      image,
       description,
     });
   }
 
   return (
     <>
-      <TableRow row="row">
+      <TableRow role="row">
         <Img src={image} />
         <Cabin>{name}</Cabin>
-
         <div>Fits up to {maxCapacity} guests</div>
         <Price>{formatCurrency(regularPrice)}</Price>
-
         {discount ? (
           <Discount>{formatCurrency(discount)}</Discount>
         ) : (
-          <span> &mdash;</span>
+          <span>&mdash;</span>
         )}
         <div>
           <button disabled={isCreating} onClick={handleDuplicate}>
